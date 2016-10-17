@@ -97,9 +97,8 @@ public class Line2D {
 	 * @return	The y value of the interesection of the line with the X axis
 	 */
 	public Double getXIntersect(){
-		//TODO
-
-		return null;
+		//y=ax+b => ax+b = 0 => ax = -b => x = -b/a
+		return (this.getYIntersect()*-1)/this.getSlope();
 	}
 
 	/**
@@ -129,7 +128,7 @@ public class Line2D {
 	 * @return	True if the lines are parallel, false otherwise
 	 */
 	public boolean isParallel (Line2D line){
-		return this.slope == line.getSlope();
+		return this.slope.equals(line.getSlope());
 	}
 
 	/**
@@ -146,7 +145,7 @@ public class Line2D {
 
 		Line2D line = (Line2D) obj;
 
-		return this.getSlope() == line.getSlope() && this.getPoint() == line.getPoint();
+		return this.getSlope().equals(line.getSlope()) && this.contains(line.getPoint());
 	}
 
 	/**
@@ -158,9 +157,13 @@ public class Line2D {
 		return "Point: "+this.getPoint()+", Slope: "+this.getSlope();
 	}
 
+	/**
+	 *
+	 * @return	A string representation of the line as a StringBuilder instance
+	 */
 	public StringBuilder toStringBuilder(){
-		//TODO
-
-		return null;
+		StringBuilder sb = new StringBuilder();
+		sb.append(this.toString());
+		return sb;
 	}
 }
