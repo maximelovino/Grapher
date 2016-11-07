@@ -38,9 +38,9 @@ public class Line2D implements Object2D{
 
 		Double slope;
 		if (p1.getX()>p2.getX()){
-			slope = (p1.getY()-p2.getY())/(p1.getX()-p2.getY());
+			slope = (p1.getY()-p2.getY())/(p1.getX()-p2.getX());
 		}else{
-			slope = (p2.getY()-p1.getY())/(p2.getX()-p2.getX());
+			slope = (p2.getY()-p1.getY())/(p2.getX()-p1.getX());
 		}
 
 		this.slope = slope;
@@ -171,9 +171,12 @@ public class Line2D implements Object2D{
 
 	@Override
 	public void draw(Graphics g, int rectSize, int margin, double minX, double maxX, double minY, double maxY, int width, int height) {
-		Point2D p1 = new Point2D(this.getXIntersect(),0.0);
-		Point2D p2 = new Point2D(100.0,100.0);
+		Point2D p1 = this.getPoint();
+		Point2D p2 = new Point2D(p1.getX()+80,p1.getY()+80*this.getSlope());
+		System.out.println(p1+","+p2);
 
+		p1 = p1.getScaledPoint(margin, minX, maxX, minY, maxY, width, height);
+		p2 = p2.getScaledPoint(margin, minX, maxX, minY, maxY, width, height);
 		g.drawLine(p1.getX().intValue(),p1.getY().intValue(),p2.getX().intValue(),p2.getY().intValue());
 
 	}

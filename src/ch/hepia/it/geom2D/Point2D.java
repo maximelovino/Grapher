@@ -70,15 +70,20 @@ public class Point2D implements Object2D{
 	@Override
 	public void draw(Graphics g, int rectSize, int margin, double minX, double maxX, double minY, double maxY, int width, int height) {
 		Double shift = rectSize / 2.0;
+		System.out.println(this);
+		Point2D scaledPoint = getScaledPoint(margin, minX, maxX, minY, maxY, width, height);
 
-		Double xScaled = (this.getX()/maxX)*(width-margin);
-		System.out.println("xscaled: "+xScaled);
-		Double yScaled = (this.getY()/maxY)*(height-margin);
-		System.out.println("yscaled: "+yScaled);
-
-		Integer startX = Double.valueOf(xScaled-shift).intValue();
-		Integer startY = Double.valueOf(yScaled-shift).intValue();
+		Integer startX = Double.valueOf(scaledPoint.getX()-shift).intValue()+margin;
+		Integer startY = Double.valueOf(scaledPoint.getY()-shift).intValue()+margin;
+		System.out.println("startX: "+startX);
+		System.out.println("startY: "+startY);
 
 		g.drawRect(startX,startY,rectSize,rectSize);
+	}
+
+	public Point2D getScaledPoint(int margin, double minX, double maxX, double minY, double maxY, int width, int height){
+		Double xScaled = ((this.getX()-minX)/(maxX-minX))*(width-2*margin);
+		Double yScaled = ((this.getY()-minY)/(maxY-minY))*(height-2*margin);
+		return new Point2D(xScaled,yScaled);
 	}
 }

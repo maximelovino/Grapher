@@ -24,6 +24,8 @@ public class DataDrawer extends JPanel {
 	@Override
 	protected void paintComponent (Graphics g) {
 		super.paintComponent(g);
+		g.setColor(Color.RED);
+		g.drawRect(boundsMargin,boundsMargin,this.getWidth()-2*boundsMargin,this.getHeight()-2*boundsMargin);
 		//g.setXORMode(Color.red);
 		g.setColor(Color.BLUE);
 		System.out.println(this.getWidth());
