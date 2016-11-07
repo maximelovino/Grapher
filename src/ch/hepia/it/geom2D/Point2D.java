@@ -71,9 +71,9 @@ public class Point2D implements Object2D{
 	public void draw(Graphics g, int rectSize, int margin, double minX, double maxX, double minY, double maxY, int width, int height) {
 		Double shift = rectSize / 2.0;
 
-		Double xScaled = (this.getX()/maxX)*width;
+		Double xScaled = (this.getX()/maxX)*(width-margin);
 		System.out.println("xscaled: "+xScaled);
-		Double yScaled = (this.getY()/maxY)*height;
+		Double yScaled = (this.getY()/maxY)*(height-margin);
 		System.out.println("yscaled: "+yScaled);
 
 		Integer startX = Double.valueOf(xScaled-shift).intValue();

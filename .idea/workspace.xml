@@ -2,20 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="39378653-af20-4c0c-bd8f-d5d7687f5038" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ch/hepia/it/geom2D/Object2D.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ch/hepia/it/gui/DataDrawer.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ch/hepia/it/gui/Grapher.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/TP4/ch/hepia/it/geom2D/Object2D.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/TP4/ch/hepia/it/utils/PointsReader.class" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TP4/ch/hepia/it/geom2D/Line2D.class" afterPath="$PROJECT_DIR$/out/production/TP4/ch/hepia/it/geom2D/Line2D.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TP4/ch/hepia/it/geom2D/Point2D.class" afterPath="$PROJECT_DIR$/out/production/TP4/ch/hepia/it/geom2D/Point2D.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TP4/ch/hepia/it/tests/TestPoints.class" afterPath="$PROJECT_DIR$/out/production/TP4/ch/hepia/it/tests/TestPoints.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/test.txt" afterPath="$PROJECT_DIR$/data/test.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ch/hepia/it/geom2D/Line2D.java" afterPath="$PROJECT_DIR$/src/ch/hepia/it/geom2D/Line2D.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ch/hepia/it/geom2D/Point2D.java" afterPath="$PROJECT_DIR$/src/ch/hepia/it/geom2D/Point2D.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ch/hepia/it/tests/TestPoints.java" afterPath="$PROJECT_DIR$/src/ch/hepia/it/tests/TestPoints.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ch/hepia/it/utils/DataPoints.java" afterPath="$PROJECT_DIR$/src/ch/hepia/it/utils/DataPoints.java" />
     </list>
     <ignored path="TP4.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -40,8 +27,8 @@
       <file leaf-file-name="Point2D.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/ch/hepia/it/geom2D/Point2D.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="663">
-              <caret line="75" column="38" selection-start-line="75" selection-start-column="38" selection-end-line="75" selection-end-column="38" />
+            <state relative-caret-position="309">
+              <caret line="72" column="0" selection-start-line="72" selection-start-column="0" selection-end-line="72" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -50,8 +37,8 @@
       <file leaf-file-name="Line2D.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ch/hepia/it/geom2D/Line2D.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="414">
-              <caret line="175" column="0" selection-start-line="175" selection-start-column="0" selection-end-line="175" selection-end-column="0" />
+            <state relative-caret-position="354">
+              <caret line="107" column="75" selection-start-line="107" selection-start-column="75" selection-end-line="107" selection-end-column="75" />
               <folding />
             </state>
           </provider>
@@ -345,7 +332,7 @@
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file:///Users/maximelovino/Dropbox/HEPIA/2016-2017/IT_251 - Programmation orientée objet avec Java/TP4/src/ch/hepia/it/geom2D/Point2D.java" />
+    <property name="SearchEverywhereHistoryKey" value="line&#9;FILE&#9;file:///Users/maximelovino/Dropbox/HEPIA/2016-2017/IT_251 - Programmation orientée objet avec Java/TP4/src/ch/hepia/it/geom2D/Line2D.java" />
     <property name="js-jscs-nodeInterpreter" value="/usr/local/bin/node" />
   </component>
   <component name="RunManager" selected="Application.Grapher">
@@ -901,12 +888,12 @@
       <workItem from="1477832257864" duration="5771000" />
       <workItem from="1478020113196" duration="78000" />
       <workItem from="1478020204421" duration="761000" />
-      <workItem from="1478520271084" duration="3432000" />
+      <workItem from="1478520271084" duration="3802000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="20995000" />
+    <option name="totallyTimeSpent" value="21365000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="110" y="67" width="1400" height="1009" extended-state="0" />
@@ -1325,14 +1312,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ch/hepia/it/geom2D/Line2D.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="414">
-          <caret line="175" column="0" selection-start-line="175" selection-start-column="0" selection-end-line="175" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/ch/hepia/it/gui/DataDrawer.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="435">
@@ -1359,10 +1338,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/ch/hepia/it/geom2D/Line2D.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="354">
+          <caret line="107" column="75" selection-start-line="107" selection-start-column="75" selection-end-line="107" selection-end-column="75" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/ch/hepia/it/geom2D/Point2D.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="663">
-          <caret line="75" column="38" selection-start-line="75" selection-start-column="38" selection-end-line="75" selection-end-column="38" />
+        <state relative-caret-position="309">
+          <caret line="72" column="0" selection-start-line="72" selection-start-column="0" selection-end-line="72" selection-end-column="0" />
           <folding />
         </state>
       </provider>
