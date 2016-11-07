@@ -1,6 +1,8 @@
 package ch.hepia.it.geom2D;
 
-public class Point2D {
+import java.awt.*;
+
+public class Point2D implements Object2D{
 	private Double x = null;
 	private Double y = null;
 
@@ -56,12 +58,27 @@ public class Point2D {
 
 		Point2D otherPoint = (Point2D) obj;
 
-		return this.getX() == otherPoint.getX() && this.getY() ==otherPoint.getY();
+		return this.getX() == otherPoint.getX() && this.getY() == otherPoint.getY();
 	}
 
 	@Override
 	public String toString () {
 		//output format (x,y)
 		return "("+this.getX()+","+this.getY()+")";
+	}
+
+	@Override
+	public void draw(Graphics g, int rectSize, int margin, double minX, double maxX, double minY, double maxY, int width, int height) {
+		Double shift = rectSize / 2.0;
+
+		Double xScaled = (this.getX()/maxX)*width;
+		System.out.println("xscaled: "+xScaled);
+		Double yScaled = (this.getY()/maxY)*height;
+		System.out.println("yscaled: "+yScaled);
+
+		Integer startX = Double.valueOf(xScaled-shift).intValue();
+		Integer startY = Double.valueOf(yScaled-shift).intValue();
+
+		g.drawRect(startX,startY,rectSize,rectSize);
 	}
 }

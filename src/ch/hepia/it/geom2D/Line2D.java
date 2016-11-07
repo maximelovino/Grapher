@@ -1,6 +1,8 @@
 package ch.hepia.it.geom2D;
 
-public class Line2D {
+import java.awt.*;
+
+public class Line2D implements Object2D{
 	private Point2D point;
 	private Double slope;
 
@@ -94,7 +96,7 @@ public class Line2D {
 
 	/**
 	 *
-	 * @return	The y value of the interesection of the line with the X axis
+	 * @return	The y value of the intersection of the line with the X axis
 	 */
 	public Double getXIntersect(){
 		//y=ax+b => ax+b = 0 => ax = -b => x = -b/a
@@ -103,7 +105,7 @@ public class Line2D {
 
 	/**
 	 *
-	 * @return	The x value of the interesection of the line with the Y axis
+	 * @return	The x value of the intersection of the line with the Y axis
 	 */
 	public Double getYIntersect(){
 		if (this.point.getX() == 0.0){
@@ -165,5 +167,14 @@ public class Line2D {
 		StringBuilder sb = new StringBuilder();
 		sb.append(this.toString());
 		return sb;
+	}
+
+	@Override
+	public void draw(Graphics g, int rectSize, int margin, double minX, double maxX, double minY, double maxY, int width, int height) {
+		Point2D p1 = new Point2D(this.getXIntersect(),0.0);
+		Point2D p2 = new Point2D(100.0,100.0);
+
+		g.drawLine(p1.getX().intValue(),p1.getY().intValue(),p2.getX().intValue(),p2.getY().intValue());
+
 	}
 }

@@ -1,5 +1,7 @@
 package ch.hepia.it.utils;
 
+import ch.hepia.it.geom2D.Line2D;
+import ch.hepia.it.geom2D.Object2D;
 import ch.hepia.it.geom2D.Point2D;
 
 import java.io.FileNotFoundException;
@@ -10,7 +12,7 @@ import java.util.ArrayList;
 
 public class DataPoints{
 	private String filePath;
-	private ArrayList<ArrayList<Point2D>> data;
+	private ArrayList<Object2D> data;
 	private double minX = Double.MAX_VALUE;
 	private double maxX = Double.MIN_VALUE;
 	private double minY = Double.MAX_VALUE;
@@ -20,6 +22,10 @@ public class DataPoints{
 		this.filePath = filePath;
 		data = new ArrayList<>();
 		readData();
+	}
+
+	public int getCount(){
+		return this.getData().size();
 	}
 
 	private void readData () {
@@ -49,7 +55,11 @@ public class DataPoints{
 					}
 				}
 
-				this.data.add(lineList);
+				if (lineList.size() == 2){
+					data.add(new Line2D(lineList.get(0),lineList.get(1)));
+				}else{
+					data.add(lineList.get(0));
+				}
 			}
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
@@ -74,7 +84,7 @@ public class DataPoints{
 		return maxY;
 	}
 
-	public ArrayList<ArrayList<Point2D>> getData () {
+	public ArrayList<Object2D> getData () {
 		return data;
 	}
 }
