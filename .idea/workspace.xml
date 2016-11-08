@@ -2,14 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="39378653-af20-4c0c-bd8f-d5d7687f5038" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TP4/ch/hepia/it/geom2D/Line2D.class" afterPath="$PROJECT_DIR$/out/production/TP4/ch/hepia/it/geom2D/Line2D.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TP4/ch/hepia/it/geom2D/Point2D.class" afterPath="$PROJECT_DIR$/out/production/TP4/ch/hepia/it/geom2D/Point2D.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TP4/ch/hepia/it/gui/DataDrawer.class" afterPath="$PROJECT_DIR$/out/production/TP4/ch/hepia/it/gui/DataDrawer.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/test.txt" afterPath="$PROJECT_DIR$/data/test.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ch/hepia/it/geom2D/Line2D.java" afterPath="$PROJECT_DIR$/src/ch/hepia/it/geom2D/Line2D.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ch/hepia/it/geom2D/Point2D.java" afterPath="$PROJECT_DIR$/src/ch/hepia/it/geom2D/Point2D.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ch/hepia/it/gui/DataDrawer.java" afterPath="$PROJECT_DIR$/src/ch/hepia/it/gui/DataDrawer.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ch/hepia/it/gui/Grapher.java" afterPath="$PROJECT_DIR$/src/ch/hepia/it/gui/Grapher.java" />
     </list>
     <ignored path="TP4.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -112,7 +106,7 @@
         <entry file="file://$PROJECT_DIR$/src/ch/hepia/it/gui/Grapher.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="180">
-              <caret line="14" column="63" selection-start-line="14" selection-start-column="63" selection-end-line="14" selection-end-column="63" />
+              <caret line="14" column="33" selection-start-line="14" selection-start-column="33" selection-end-line="14" selection-end-column="33" />
               <folding />
             </state>
           </provider>
@@ -841,16 +835,16 @@
       <workItem from="1477832257864" duration="5771000" />
       <workItem from="1478020113196" duration="78000" />
       <workItem from="1478020204421" duration="761000" />
-      <workItem from="1478520271084" duration="6441000" />
+      <workItem from="1478520271084" duration="9387000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="24004000" />
+    <option name="totallyTimeSpent" value="26950000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="110" y="67" width="1400" height="1009" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -864,7 +858,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17071429" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17071429" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1302,7 +1296,7 @@
     <entry file="file://$PROJECT_DIR$/src/ch/hepia/it/gui/Grapher.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
-          <caret line="14" column="63" selection-start-line="14" selection-start-column="63" selection-end-line="14" selection-end-column="63" />
+          <caret line="14" column="33" selection-start-line="14" selection-start-column="33" selection-end-line="14" selection-end-column="33" />
           <folding />
         </state>
       </provider>

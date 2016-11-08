@@ -12,6 +12,7 @@ public class Grapher {
 		System.out.println("maxX: "+data.getMaxX());
 		System.out.println("minY: "+data.getMinY());
 		System.out.println("maxY: "+data.getMaxY());
+		System.out.println("hello");
 		DataDrawer drawer = new DataDrawer(data,600,400,10,10);
 		JFrame frame = new JFrame();
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
