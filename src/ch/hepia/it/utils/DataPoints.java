@@ -54,11 +54,12 @@ public class DataPoints{
 						lineList.add(new Point2D(x,y));
 					}
 				}
+				for (Point2D point : lineList) {
+					data.add(point);
+				}
 
 				if (lineList.size() == 2){
 					data.add(new Line2D(lineList.get(0),lineList.get(1)));
-				}else{
-					data.add(lineList.get(0));
 				}
 			}
 			reader.close();
