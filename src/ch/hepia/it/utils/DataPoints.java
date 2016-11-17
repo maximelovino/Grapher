@@ -61,6 +61,7 @@ public class DataPoints{
 					data.add(lineList.get(0));
 				}
 			}
+			reader.close();
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
 		} catch (IOException e) {
