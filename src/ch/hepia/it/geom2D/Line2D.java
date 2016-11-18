@@ -2,15 +2,18 @@ package ch.hepia.it.geom2D;
 
 import java.awt.*;
 
-public class Line2D implements Object2D{
+/**
+ * Class for a 2D line implementation, we implement Object2D interface
+ */
+public class Line2D implements Object2D {
 	private Point2D point;
 	private Double slope;
 
 	/**
-	 * Primary constructor for our Line2D
+	 * Main constructor for Line
 	 *
-	 * @param point	A point of the line
-	 * @param slope	The slope of the line
+	 * @param point A point of the line
+	 * @param slope The slope of the line
 	 */
 	public Line2D (Point2D point, Double slope) {
 		this.point = point;
@@ -18,29 +21,30 @@ public class Line2D implements Object2D{
 	}
 
 	/**
-	 * Constructor for our Line2D
+	 * Constructor from a y intersect value and a slope
 	 *
-	 * @param slope	The slope of the line
-	 * @param y	The y intersection of the line
+	 * @param slope The slope of the line
+	 * @param y     The y intersect of the line
 	 */
 	public Line2D (Double slope, Double y) {
-		this(new Point2D(0.0,y),slope);
+		this(new Point2D(0.0, y), slope);
 	}
 
 	/**
-	 * Constructor for our Line2D taking two points
+	 * Constructor from two points
 	 *
-	 * @param p1	A point of our line
-	 * @param p2	A second point of our line (different)
+	 * @param p1 A point
+	 * @param p2 Another point
+	 * @throws IllegalArgumentException If the two points are the same
 	 */
-	public Line2D (Point2D p1, Point2D p2){
+	public Line2D (Point2D p1, Point2D p2) throws IllegalArgumentException {
 		if (p1.equals(p2)) throw new IllegalArgumentException("Can't build a line with two equal points");
 
 		Double slope;
-		if (p1.getX()>p2.getX()){
-			slope = (p1.getY()-p2.getY())/(p1.getX()-p2.getX());
-		}else{
-			slope = (p2.getY()-p1.getY())/(p2.getX()-p1.getX());
+		if (p1.getX() > p2.getX()) {
+			slope = (p1.getY() - p2.getY()) / (p1.getX() - p2.getX());
+		} else {
+			slope = (p2.getY() - p1.getY()) / (p2.getX() - p1.getX());
 		}
 
 		this.slope = slope;
@@ -50,7 +54,7 @@ public class Line2D implements Object2D{
 	/**
 	 * Getter for the point
 	 *
-	 * @return	The point used to build the line
+	 * @return The point used to build the line
 	 */
 	public Point2D getPoint () {
 		return point;
@@ -59,7 +63,7 @@ public class Line2D implements Object2D{
 	/**
 	 * Setter for the point
 	 *
-	 * @param point	The point we want to set
+	 * @param point The point we want to set
 	 */
 	public void setPoint (Point2D point) {
 		this.point = point;
@@ -68,7 +72,7 @@ public class Line2D implements Object2D{
 	/**
 	 * Getter for the slope
 	 *
-	 * @return	The slope of the line
+	 * @return The slope of the line
 	 */
 	public Double getSlope () {
 		return slope;
@@ -77,7 +81,7 @@ public class Line2D implements Object2D{
 	/**
 	 * Setter for the slope
 	 *
-	 * @param slope	The slope we want to set
+	 * @param slope The slope we want to set
 	 */
 	public void setSlope (Double slope) {
 		this.slope = slope;
@@ -86,62 +90,55 @@ public class Line2D implements Object2D{
 	/**
 	 * Setter for the point and slope
 	 *
-	 * @param point	The point we want to set
-	 * @param slope	The slope we want to set
+	 * @param point The point we want to set
+	 * @param slope The slope we want to set
 	 */
-	public void setPointSlope (Point2D point, Double slope){
+	public void setPointSlope (Point2D point, Double slope) {
 		this.point = point;
 		this.slope = slope;
 	}
 
 	/**
-	 *
-	 * @return	The y value of the intersection of the line with the X axis
+	 * @return The x value of the intersection of the line with the X axis
 	 */
-	public Double getXIntersect(){
-		//y=ax+b => ax+b = 0 => ax = -b => x = -b/a
-		return (this.getYIntersect()*-1)/this.getSlope();
+	public Double getXIntersect () {
+		return (this.getYIntersect() * -1) / this.getSlope();
 	}
 
 	/**
-	 *
-	 * @return	The x value of the intersection of the line with the Y axis
+	 * @return The y value of the intersection of the line with the Y axis
 	 */
-	public Double getYIntersect(){
-		if (this.point.getX() == 0.0){
-			return this.point.getY();
-		}
+	public Double getYIntersect () {
+		if (this.point.getX() == 0.0) return this.point.getY();
 
-		return this.point.getY() - this.getSlope()*this.point.getX();
+		return this.point.getY() - this.getSlope() * this.point.getX();
 	}
 
 	/**
-	 *
-	 * @param point	The point we want to check
-	 * @return	True if the point is contained in the line, false otherwise
+	 * @param point The point we want to check
+	 * @return True if the point is contained in the line, false otherwise
 	 */
-	public boolean contains(Point2D point){
-		return point.getY() == point.getX()*this.slope+this.getYIntersect();
+	public boolean contains (Point2D point) {
+		return point.getY() == point.getX() * this.slope + this.getYIntersect();
 	}
 
 	/**
-	 *
-	 * @param line	The line we want to check parallelism with
-	 * @return	True if the lines are parallel, false otherwise
+	 * @param line The line we want to check parallelism with
+	 * @return True if the lines are parallel, false otherwise
 	 */
-	public boolean isParallel (Line2D line){
+	public boolean isParallel (Line2D line) {
 		return this.slope.equals(line.getSlope());
 	}
 
 	/**
 	 * Override of the equals method
 	 *
-	 * @param obj	The object we want to compare with
-	 * @return	True if they are the same Line, false otherwise
+	 * @param obj The object we want to compare with
+	 * @return True if they are the same Line, false otherwise
 	 */
 	@Override
 	public boolean equals (Object obj) {
-		if (!(obj instanceof Line2D)){
+		if (!(obj instanceof Line2D)) {
 			return false;
 		}
 
@@ -151,42 +148,54 @@ public class Line2D implements Object2D{
 	}
 
 	/**
+	 * Override of the toString method
 	 *
-	 * @return	A string representation of the line in the format "Point: <point>, Slope: <slope>"
+	 * @return A string representation of the line in the format "Point: <point>, Slope: <slope>"
 	 */
 	@Override
 	public String toString () {
-		return "Point: "+this.getPoint()+", Slope: "+this.getSlope();
+		return "Point: " + this.getPoint() + ", Slope: " + this.getSlope();
 	}
 
 	/**
-	 *
-	 * @return	A string representation of the line as a StringBuilder instance
+	 * @return A string representation of the line as a StringBuilder instance
 	 */
-	public StringBuilder toStringBuilder(){
+	public StringBuilder toStringBuilder () {
 		StringBuilder sb = new StringBuilder();
 		sb.append(this.toString());
 		return sb;
 	}
 
+	/**
+	 * Method to get the x coordinate of a point of the line from its y coordinate
+	 *
+	 * @param y The y coordinate
+	 * @return The x coordinate of the point on the line
+	 */
 	private double xValueFromY (double y) {
-		// y = ax + b
-		// (y - b) / a = x
 		return (y - this.getYIntersect()) / this.slope;
 	}
 
+	/**
+	 * Method to get the y coordinate of a point of the line from its x coordinate
+	 *
+	 * @param x The x coordinate
+	 * @return The y coordinate of the point on the line
+	 */
 	private double yValueFromX (double x) {
-		// y = ax + b
 		return this.slope * x + this.getYIntersect();
 	}
 
-	//	@Override
-	public void draw(Graphics g, int rectSize, int margin, double minX, double maxX, double minY, double maxY, int width, int height) {
-		Point2D borderLeft = new Point2D((minX - margin), this.yValueFromX(minX - margin));
-		Point2D scaledBorderLeft = borderLeft.getScaledPoint(margin, minX, maxX, minY, maxY, width, height);
+	/**
+	 * Implementation of the draw method from Object2D
+	 */
+	@Override
+	public void draw (Graphics g, int rectSize, int margin, double minX, double maxX, double minY, double maxY, int width, int height) {
+		Point2D borderLeft = new Point2D((minX), this.yValueFromX(minX));
+		Point2D scaledBorderLeft = borderLeft.getScaledPoint(minX, maxX, minY, maxY, width, height);
 
-		Point2D borderRight = new Point2D((maxX + margin), this.yValueFromX(maxX + margin));
-		Point2D scaledBorderRight = borderRight.getScaledPoint(margin, minX, maxX, minY, maxY, width, height);
+		Point2D borderRight = new Point2D((maxX), this.yValueFromX(maxX));
+		Point2D scaledBorderRight = borderRight.getScaledPoint(minX, maxX, minY, maxY, width, height);
 
 		g.drawLine(scaledBorderLeft.getX().intValue(), scaledBorderLeft.getY().intValue(), scaledBorderRight.getX().intValue(), scaledBorderRight.getY().intValue());
 	}
